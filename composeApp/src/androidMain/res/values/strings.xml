@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EBookCmp</string>
+    <string name="search_results">Search Results</string>
+    <string name="favorites">Favorites</string>
 </resources>

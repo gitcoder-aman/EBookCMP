@@ -1,0 +1,86 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "2e06cd0aa59e4dbabd092b2257d3be82",
+    "entities": [
+      {
+        "tableName": "BookEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `imageUrl` TEXT NOT NULL, `languages` TEXT NOT NULL, `authors` TEXT NOT NULL, `firstPublishYear` TEXT, `ratingAverage` REAL, `ratingCount` INTEGER, `numOfPagesMedian` INTEGER, `numEditions` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "languages",
+            "columnName": "languages",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authors",
+            "columnName": "authors",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstPublishYear",
+            "columnName": "firstPublishYear",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "ratingAverage",
+            "columnName": "ratingAverage",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "ratingCount",
+            "columnName": "ratingCount",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "numOfPagesMedian",
+            "columnName": "numOfPagesMedian",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "numEditions",
+            "columnName": "numEditions",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2e06cd0aa59e4dbabd092b2257d3be82')"
+    ]
+  }
+}

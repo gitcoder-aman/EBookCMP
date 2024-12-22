@@ -21,7 +21,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -32,7 +32,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm("desktop")
 
     room {
@@ -57,10 +57,10 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -142,9 +142,16 @@ compose.desktop {
         mainClass = "org.tech.ebookcmp.MainKt"
 
         nativeDistributions {
+                          //for MAC          for Window       // for linux
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "org.tech.ebookcmp"
             packageVersion = "1.0.0"
+            //for window .exe
+            windows{
+                packageVersion = "1.0.0"
+                msiPackageVersion = "1.0.0"
+                exePackageVersion = "1.0.0"
+            }
         }
     }
 }
