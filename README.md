@@ -21,4 +21,8 @@ If you face any issues, please report them on [GitHub](https://github.com/JetBra
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
 
 ![Screenshot (16)](https://github.com/user-attachments/assets/70a3834b-18e4-4f1a-84a5-bb90b8981dda)
+![Screenshot (17)](https://github.com/user-attachments/assets/740206dd-7d82-43d6-818c-89d45f9bc452)
+![Screenshot (18)](https://github.com/user-attachments/assets/a2436fd4-147d-45b6-8139-3c284618b012)
+
+
 
